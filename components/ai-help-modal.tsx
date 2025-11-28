@@ -90,7 +90,7 @@ export function AIHelpModal({
           </div>
         ) : (
           <div className="py-8 text-center text-gray-500">
-            Click "Get AI Help" to load guidance
+            Click &quot;Get AI Help&quot; to load guidance
           </div>
         )}
       </DialogContent>

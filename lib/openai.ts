@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { createClient } from "@/lib/supabase/admin";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -13,7 +13,7 @@ export interface AIResponse {
 }
 
 export async function getCachedResponse(key: string): Promise<any | null> {
-  const supabase = createClient();
+  const supabase = createAdminClient();
   const { data, error } = await supabase
     .from("ai_cache")
     .select("response_json, created_at, ttl")
@@ -39,7 +39,7 @@ export async function cacheResponse(
   response: any,
   ttl?: number
 ): Promise<void> {
-  const supabase = createClient();
+  const supabase = createAdminClient();
   await supabase.from("ai_cache").upsert({
     key,
     prompt,

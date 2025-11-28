@@ -80,7 +80,7 @@ export default async function ProjectsPage() {
         ) : (
           <Card>
             <CardContent className="py-12 text-center">
-              <p className="text-gray-500 mb-4">You don't have any projects yet.</p>
+              <p className="text-gray-500 mb-4">You don&apos;t have any projects yet.</p>
               <Link href="/launch-packs">
                 <Button>Browse Launch Packs</Button>
               </Link>

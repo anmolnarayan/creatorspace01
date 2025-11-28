@@ -62,7 +62,7 @@ export default async function LaunchPackDetailPage({
 
             <Card>
               <CardHeader>
-                <CardTitle>What You'll Build</CardTitle>
+                <CardTitle>What You&apos;ll Build</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
