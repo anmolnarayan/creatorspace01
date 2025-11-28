@@ -10,7 +10,7 @@ export async function StudentDashboard({ userId }: { userId: string }) {
   // Get recommended launch packs
   const { data: userProfile } = await supabase
     .from("users")
-    .select("skills, goal")
+    .select("skills, goal, reliability_score")
     .eq("id", userId)
     .single();
 
